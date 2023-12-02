@@ -1,10 +1,11 @@
 //3. Write a program to count vowels in a given string
 
+
 #include<stdio.h>
 #include<string.h>
 int main()
 {
-    char str[100],a[6]="aeiou";
+    char str[100],a[11]="aeiouAEIOU";
     int i,j,count=0;
     printf("enter a word:\n");
     fgets(str,100,stdin);
