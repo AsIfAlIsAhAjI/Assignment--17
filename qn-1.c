@@ -1,64 +1,16 @@
+//1. Write a program to calculate the length of the string. (without using built-in method)
 #include<stdio.h>
-#include<stdlib.h>
+#include<string.h>
 int main()
 {
-    int x,n,i,m,r,j;
-    printf("enter the size of an array:\n");
-    scanf("%d",&n);
-    printf("how many times u want to rotate it:\n");
-    scanf("%d",&r);
-    printf("enter %d numbers\n",n);
 
-    int a[n];
-    for(i=0;i<n;i++)
-    {
-        scanf("%d",&a[i]);
-    }
+    char str[100];
+    int i;
+    printf("Enter a word:\n");
+    fgets(str,100,stdin);
 
-    printf("1.right direction\n");
-    printf("2.left direction\n");
-    scanf("%d",&x);
+    for(i=0;str[i];i++);
 
-    switch(x)
-    {
-        case 1:
-            for(j=1;j<=r;j++)
-            {
+    printf("The length of this string is: %d",i-1);
 
-                for(i=0;i<n;i++)
-                {
-                    m=a[i];
-                    a[i]=a[n-1];
-                    a[n-1]=m;
-
-                }
-            }
-            for(i=0;i<n;i++)
-            {
-                printf("%d ",a[i]);
-            }
-            break;
-        case 2:
-             for(j=1;j<=r;j++)
-            {
-
-                for(i=n-1;i>=0;i--)
-                {
-                    m=a[n-1];
-                    a[n-1]=a[i];
-                    a[i]=m;
-
-                }
-            }
-            for(i=0;i<n;i++)
-            {
-                printf("%d ",a[i]);
-            }
-            break;
-
-    }
 }
-
-
-
-
