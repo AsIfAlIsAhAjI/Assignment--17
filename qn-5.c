@@ -19,3 +19,22 @@ int main()
 
     printf("%s",str);
 }
+
+//Another process:
+
+/*#include<stdio.h>
+int main()
+{
+    char str[100];
+    int i;
+    printf("enter a word:\n");
+    fgets(str,100,stdin);
+
+    for(i=0;str[i];i++)
+    {
+        if(str[i]>='A'&& str[i]<='Z')
+            str[i]+=32;
+    }
+    printf("%s",str);
+}*/
+
